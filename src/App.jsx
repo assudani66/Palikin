@@ -5,7 +5,6 @@ import { Route,Routes } from "react-router-dom";
 import { Home,Profile,FriendsList,FriendChat,Events,EventDetails,CommunityChat,Communities } from "./pages";
 
 import { NavBar } from "./components";
-import { Header } from "./components";
 
 export default function App() {
   return (
