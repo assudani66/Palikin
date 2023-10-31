@@ -4,8 +4,11 @@ import { Route,Routes } from "react-router-dom";
 
 import { Home,Profile,FriendsList,FriendChat,Events,EventDetails,CommunityChat,Communities } from "./pages";
 
+import { NavBar } from "./components";
+
 export default function App() {
   return (
+    <div className="h-screen">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
@@ -16,5 +19,9 @@ export default function App() {
       <Route path="/communities" element={<CommunityChat />} />
       <Route path="/community/chat" element={<Communities />} />
     </Routes>
+
+    <NavBar />
+
+    </div>
   )
 }
