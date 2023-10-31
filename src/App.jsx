@@ -10,8 +10,6 @@ import { Header } from "./components";
 export default function App() {
   return (
     <div className="h-screen">
-      <Header heading={"Home"}/>
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
