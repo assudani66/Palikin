@@ -5,10 +5,13 @@ import { Route,Routes } from "react-router-dom";
 import { Home,Profile,FriendsList,FriendChat,Events,EventDetails,CommunityChat,Communities } from "./pages";
 
 import { NavBar } from "./components";
+import { Header } from "./components";
 
 export default function App() {
   return (
     <div className="h-screen">
+      <Header heading={"Home"}/>
+
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
