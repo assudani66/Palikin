@@ -5,3 +5,4 @@ export { ContactCard } from "./contactCard/ContactCard";
 export { EventsCard } from "./eventsCard/EventsCard";
 export { NavBar } from "./navBar/NavBar";
 export { NotificationModal } from "./notifications/NotificationModal";
+export { Header } from "./header/Header";
