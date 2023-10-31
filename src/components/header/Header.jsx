@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Header = ({heading}) => {
+export const Header = ({heading,padding}) => {
   return (
-    <div className='flex justify-between py-12 px-8 bg-background rounded-b-[30px]'>
+    <div className={`flex justify-between pt-12 ${padding?? "pb-12"} px-8 bg-background rounded-b-[30px] `}>
       <h1 className='text-2xl font-bold '>{heading}</h1>
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_19_497)">

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom";
 
 import { Header } from '../../components'
-
+import { ActionButton } from '../../components';
 
 
 export const EventDetails = () => 
@@ -15,8 +15,8 @@ export const EventDetails = () =>
     const [like,setLike] = useState(false);
 
   return (
-    <div className="flex flex-col">
-      <header className="flex flex-col relative">
+    <div className="flex flex-col overflow-x-hidden ">
+      <header className="flex flex-col relative h ">
         <Header heading="Events" />
         <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal">
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>navigate("/events")}>
@@ -47,6 +47,18 @@ export const EventDetails = () =>
       }
 
       </main>
+
+      <section className='mt-4 ml-9 w-fit'>
+        <h1 className='text-2xl font-medium leading-10  '>01-11-2023</h1>
+        <span className='text-sm font-medium '>4:00PM - 8:00PM</span>
+      </section>
+
+      <aside className='mt-4 ml-9 '>
+        <h1 className='text-base font-bold leading-8'>About Event</h1>
+        <p className='leading-7 max-w-[70%] '>Join us at Kubuntu's Party - an exciting celebration of all things Kubuntu! Learn, share, and have
+           fun with fellow enthusiasts, developers, and users. Don't miss this inclusive and engaging event!</p>
+      </aside>
+      <ActionButton type="register" />
     </div>
   )
 }
