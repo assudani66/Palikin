@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { Route,Routes } from "react-router-dom";
 
@@ -6,7 +6,10 @@ import { Home,Profile,FriendsList,FriendChat,Events,EventDetails,CommunityChat,C
 
 import { NavBar } from "./components";
 
-export default function App() {
+export default function App() 
+{
+  const [showNavBar,setShowNavBar] = useState(true);
+
   return (
     <div className="h-screen">
     <Routes>
@@ -20,7 +23,7 @@ export default function App() {
       <Route path="/community/chat" element={<Communities />} />
     </Routes>
 
-    <NavBar />
+    {showNavBar && <NavBar />}
 
     </div>
   )

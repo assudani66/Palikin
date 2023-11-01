@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { Header } from '../../components'
+import { ActionButton } from '../../components'
+
 export const Profile = () => {
 
   const profileInfo = {
@@ -14,10 +17,12 @@ export const Profile = () => {
   }
 
   return (
-    <div className="mt-[-40px]">
-      <div className="flex flex-col justify-center items-center">
-        <img src={profileInfo.profilePic} alt="profile" className="w-24 h-24 rounded-full"/>
-        <img src={profileInfo.qrCode} alt="qr" />
+    <>
+    <Header heading={"Profile"} padding={"pb-32"}/>
+    <div className=" -mt-24 justify-center">
+      <div className="flex flex-col justify-center items-center bg-white mx-9 rounded-lg shadow-md h-72" style={{boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)'}}>
+        <img src={profileInfo.profilePic} alt="profile" width={96} height={96} className="w-24 h-24 rounded-full -mt-12 border-[6px] border-background box-content"/>
+        <img src={profileInfo.qrCode} alt="qr" width={230} height={230}/>
         <h1 className="font-bold">@{profileInfo.username}</h1>
       </div>
       <div className="ml-[30px] mt-[20px]">
@@ -25,7 +30,7 @@ export const Profile = () => {
         <p className="italic font-bold">{profileInfo.bio}</p>
       </div>
       <div>
-        <div className="ml-[-60px] mt-[20px] flex justify-around items-center">
+        <div className=" mt-[20px] flex justify-around items-center">
           <span className="flex">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_19_533)">
@@ -41,7 +46,7 @@ export const Profile = () => {
           </span>
           <button className="bg-blue-500 px-2 py-1 text-white rounded-[5px]">Follow</button>
         </div>
-        <div className="ml-[-60px] mt-[20px] flex justify-around items-center">
+        <div className=" mt-[20px] flex justify-around items-center">
           <span className="flex">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.7498 14.722L30.5087 2.125H27.9587L18.6193 13.0624L11.1563 2.125H2.55005L13.8338 18.666L2.55005 31.875H5.10005L14.9643 20.3235L22.8459 31.875H31.4522L19.7498 14.722ZM16.2584 18.8105L15.1152 17.1636L6.01805 4.05875H9.93442L17.2742 14.6349L18.4174 16.2818L27.9608 30.0305H24.0444L16.2584 18.8105Z" fill="black"/>
@@ -52,5 +57,7 @@ export const Profile = () => {
         </div>
       </div>
     </div>
+    <ActionButton type="edit"/>
+    </>
   )
 }
