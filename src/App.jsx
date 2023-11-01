@@ -11,16 +11,16 @@ export default function App()
   const [showNavBar,setShowNavBar] = useState(true);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen box-border overflow-x-hidden overflow-y-hidden">
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Communities />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/friends" element={<FriendsList />} />
-      <Route path="/friends/chat" element={<FriendChat setShowNavBar={setShowNavBar}/>} />
+      <Route path="/friends/chat/:name" element={<FriendChat setShowNavBar={setShowNavBar}/>} />
       <Route path="/events" element={<Events />} />
       <Route path="/events/details" element={<EventDetails />} />
       <Route path="/communities" element={<Communities />} />
-      <Route path="/community/chat" element={<CommunityChat setShowNavBar={setShowNavBar}/>} />
+      <Route path="/community/chat/:name" element={<CommunityChat setShowNavBar={setShowNavBar}/>} />
     </Routes>
 
     {showNavBar && <NavBar />}

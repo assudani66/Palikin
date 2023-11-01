@@ -7,7 +7,7 @@ export const EventCard = ({event}) => {
   const navigate = useNavigate();
 
   return (
-    <li className='flex gap-4 h-fit ml-8 mb-5' onClick={()=>navigate("/events/details")}>
+    <li className='flex gap-4 h-fit ml-8 mb-5' onClick={()=>navigate("/events/details",{state:{eventName:event.name, groups:"4 groups", date:event.date, time:event.time}})}>
         <span className='flex justify-center items-center text-3xl rounded-[22px] bg-primary w-16 h-16'
         style={{
             backgroundImage: 'radial-gradient(50% 50% at 50% 50%, #FFC8B2 0%, #F68559 100%)'

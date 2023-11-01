@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../../components/header/Header'
 import { ImageModal } from '../communityChat/ImageModal'
+import { useParams } from "react-router-dom";
 
 export const FriendChat = ({setShowNavBar}) => {
 
-  const communityName = "Harmony Haven"
+  const params = useParams();
 
   const navigate = useNavigate();
   const [media, setMedia] = useState(null)
@@ -21,10 +22,6 @@ export const FriendChat = ({setShowNavBar}) => {
     navigate("/friends") 
   }
 
-  const handleModal = () => {
-    setOpenModal(true)
-  }
-
   const handleMessage = () => {
     if(message.trim() !== ''){
       setChatMessages([...chatMessages, message])
@@ -37,19 +34,19 @@ export const FriendChat = ({setShowNavBar}) => {
   },[])
 
   return (
-    <div className='flex flex-col overflow-y-hidden'>
-      <header className="flex flex-col fixed top-0 w-full overflow-x-hidden">
+    <div className='flex h-screen flex-col'>
+      <header className="flex flex-col relative  top-0 w-full overflow-x-hidden">
       <Header heading="Chat" padding={"pb-14"}/>
       <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal ">
       <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>clickHandler()}>
       <path d="M25 12.2812H3.05176L12.6587 21.8882L11.5601 22.9868L0.0732422 11.5L11.5601 0.0131836L12.6587 1.11182L3.05176 10.7188H25V12.2812Z" fill="black"/>
       </svg>
-      <h1 className="text-2xl">{communityName}</h1>
+      <h1 className="text-2xl">{params?.name}</h1>
       <span>{" "}</span>
 
       </section>
       </header>
-      <div className='w-screen h-screen flex flex-col justify-end relative'>
+      <div className='w-screen flex-1 flex flex-col justify-end relative'>
       <div className='mb-[20px]'>
         <div className='flex items-start justify-start mb-[20px]'>
         <img src="https://i.postimg.cc/G2Q8d9s7/ted.png" alt="profile" className='w-10 h-10 rounded-full ml-2 mr-2'/>
