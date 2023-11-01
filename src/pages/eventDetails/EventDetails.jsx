@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import { Header } from '../../components'
 import { ActionButton } from '../../components';
 
+import noiseTexture from "../../assets/noise.png";
 
 export const EventDetails = () => 
 {
@@ -18,7 +19,7 @@ export const EventDetails = () =>
     <div className="flex flex-col overflow-x-hidden ">
       <header className="flex flex-col relative h ">
         <Header heading="Events" />
-        <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal">
+        <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal" >
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>navigate("/events")}>
         <path d="M25 12.2812H3.05176L12.6587 21.8882L11.5601 22.9868L0.0732422 11.5L11.5601 0.0131836L12.6587 1.11182L3.05176 10.7188H25V12.2812Z" fill="black"/>
         </svg>
@@ -29,7 +30,12 @@ export const EventDetails = () =>
       </header>
 
       <main className="max-w-full h-60 bg-primary rounded-[40px] ml-6 mr-9 mt-7 box-border flex flex-col 
-      gap-6 pl-9 content-center pt-12 relative">
+      gap-6 pl-9 content-center pt-12 relative"
+      style={{
+        backgroundImage: `url(${noiseTexture})`,
+        backgroundBlendMode: 'soft-light',
+      }}
+      >
       <span className="text-6xl text-white">🎉</span>
       <p className="text-4xl text-white whitespace-normal max-w-[200px]">{eventName}</p>
 
