@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router-dom";
 
 import { Header } from '../../components'
 import { ActionButton } from '../../components';
@@ -9,9 +9,10 @@ import noiseTexture from "../../assets/noise.png";
 export const EventDetails = () => 
 {
   const navigate = useNavigate();
-
-    const communityName = "Harmony Heaven";
-    const eventName = "Kubuntu's Party";
+  const location = useLocation();
+  const {eventName, groups, date, time} = location.state;
+    // const communityName = "Harmony Heaven";
+    // const eventName = "Kubuntu's Party";
 
     const [like,setLike] = useState(false);
 
@@ -23,7 +24,7 @@ export const EventDetails = () =>
         <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>navigate("/events")}>
         <path d="M25 12.2812H3.05176L12.6587 21.8882L11.5601 22.9868L0.0732422 11.5L11.5601 0.0131836L12.6587 1.11182L3.05176 10.7188H25V12.2812Z" fill="black"/>
         </svg>
-        <h1 className="text-2xl">{communityName}</h1>
+        <h1 className="text-2xl">{groups}</h1>
         <span>{" "}</span>
 
         </section>
@@ -55,8 +56,8 @@ export const EventDetails = () =>
       </main>
 
       <section className='mt-4 ml-9 w-fit'>
-        <h1 className='text-2xl font-medium leading-10  '>01-11-2023</h1>
-        <span className='text-sm font-medium '>4:00PM - 8:00PM</span>
+        <h1 className='text-2xl font-medium leading-10  '>{date}</h1>
+        <span className='text-sm font-medium '>{time}</span>
       </section>
 
       <aside className='mt-4 ml-9 '>
