@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const EventCarouselCard = ({ eventName, groups, date, time, eventPage }) => {
+const EventCarouselCard = ({ eventName, groups, date, time }) => {
   const navigate = useNavigate();
   return (
     <div>
@@ -20,7 +20,7 @@ const EventCarouselCard = ({ eventName, groups, date, time, eventPage }) => {
         </div>
         <div
           className="absolute bottom-0 right-0 "
-          onClick={() => navigate(eventPage)}
+          onClick={() => navigate("/events/details")}
         >
           <div className="">
             <svg

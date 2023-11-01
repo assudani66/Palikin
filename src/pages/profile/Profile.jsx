@@ -39,7 +39,7 @@ export const Profile = () => {
       </div>
       <div className="ml-[30px] mt-[20px]">
         <h1 className="font-bold text-24">{profileInfo.firstName} {profileInfo.lastName}</h1>
-        <p className="italic font-bold">{profileInfo.bio}</p>
+        <p className="italic">{profileInfo.bio}</p>
       </div>
       <div>
         <div className=" mt-[20px] flex justify-around items-center">
