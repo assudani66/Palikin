@@ -20,7 +20,7 @@ export default function App()
       <Route path="/events" element={<Events />} />
       <Route path="/events/details" element={<EventDetails />} />
       <Route path="/communities" element={<Communities />} />
-      <Route path="/community/chat" element={<CommunityChat setShowNavBar={setShowNavBar}/>} />
+      <Route path="/community/chat/:name" element={<CommunityChat setShowNavBar={setShowNavBar}/>} />
     </Routes>
 
     {showNavBar && <NavBar />}

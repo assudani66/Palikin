@@ -22,7 +22,7 @@ export const Communities = () => {
     <Header heading="Home" padding={"pb-20"}/>
     <div className='mt -mt-14 '>
       <Carousel />
-    <h1 className='text text-2xl font-bold mt-12 ml-8'>Your Communities</h1>
+    <h1 className='text text-2xl font-bold mt-8 ml-8'>Your Communities</h1>
     {communities?.map(community=>(
       <CommunityCard community={community}/>
     ))}
