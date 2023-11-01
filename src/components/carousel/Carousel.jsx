@@ -33,7 +33,7 @@ export const Carousel = () => {
     const handleScroll = () => {
       if (carouselRef.current) {
         const scrollLeft = carouselRef.current.scrollLeft;
-        if (scrollLeft >= 750) {
+        if (scrollLeft >= 700) {
           setActiveSnapPoint(750);
         } else if (scrollLeft >= 400) {
           setActiveSnapPoint(400);
@@ -62,7 +62,7 @@ export const Carousel = () => {
           <EventCarouselCard key={index} {...event} />
         ))}
       </div>
-      <div className="flex  items-center space-x-2">
+      <div className="flex  items-center space-x-2 pt-2">
         <ScrollControlButton
           snapPoint={0}
           isActive={activeSnapPoint === 0}
