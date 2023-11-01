@@ -44,10 +44,6 @@ export const Carousel = () => {
     };
 
     carouselRef.current.addEventListener("scroll", handleScroll);
-
-    return () => {
-      carouselRef.current.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   const handleScroll = (snapPoint) => {
