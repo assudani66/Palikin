@@ -20,7 +20,7 @@ const EventCarouselCard = ({ eventName, groups, date, time }) => {
         </div>
         <div
           className="absolute bottom-0 right-0 "
-          onClick={() => navigate("/events/details")}
+          onClick={() => navigate("/events/details", {state:{eventName, groups, date, time}})}
         >
           <div className="">
             <svg
