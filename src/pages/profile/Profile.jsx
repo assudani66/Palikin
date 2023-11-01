@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-import { Header } from '../../components'
-import { ActionButton } from '../../components'
+import { Header } from '../../components';
+import { ActionButton } from '../../components';
+
+import {EditProfileForm} from "../../forms";
 
 export const Profile = () => {
 
@@ -15,9 +17,17 @@ export const Profile = () => {
     twitterUrl: "https://example.com/levi",
     instaUrl: "https://example.com/igLevi"
   }
+  
+  const [showModal, setShowModal] = useState(false);
+
+  const actionClickHandler=()=>
+  {
+    setShowModal(true);
+  }
 
   return (
     <>
+    {showModal &&  <EditProfileForm setShowModal={setShowModal}/>}
     <Header heading={"Profile"} padding={"pb-32"}/>
     <div className=" -mt-24 justify-center">
       <div className="flex flex-col justify-center items-center bg-white mx-9 rounded-lg shadow-md h-72" style={{boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)'}}>
@@ -57,7 +67,7 @@ export const Profile = () => {
         </div>
       </div>
     </div>
-    <ActionButton type="edit"/>
+    <ActionButton type="edit" actionClickHandler={actionClickHandler}/>
     </>
   )
 }
