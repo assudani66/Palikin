@@ -48,7 +48,7 @@ export const FriendsList = () => {
   },[searchTerm])
 
   return (
-    <div>
+    <div className="flex flex-col">
       <header className='flex flex-col relative mb-[40px] justify-center'>
         <Header heading={"Friends"} padding={"pb-20"}/>
         <section className='flex justify-center items-center absolute top-[60%] self-center '>
@@ -58,14 +58,14 @@ export const FriendsList = () => {
           </svg>
         </section>
       </header>
-      <div className='flex flex-col justify-center items-center'>
-       <div className='flex flex-col items-start mr-[50px]'>
+      <main className='flex flex-col justify-center items-center'>
+       <section className='flex flex-col items-start mr-[50px]'>
         {
           friends?.map((friend) => <FriendCard friend={friend}/>)
         }
-        </div>
-      </div>
+        </section>
+      </main>
       <ActionButton type={"create"}/>
-    </div>
+      </div>
   )
 }

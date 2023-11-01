@@ -22,17 +22,13 @@ export const CommunityChat = ({setShowNavBar}) =>
     
   }
 
-  const handleModal = () => {
-    setOpenModal(true)
-  }
-
   useEffect(()=>{
     setShowNavBar(false);
   },[])
 
   return (
-    <div className='flex flex-col'>
-      <header className="flex flex-col fixed top-0 w-full overflow-x-hidden">
+    <div className='flex h-screen flex-col overflow-x-hidden'>
+      <header className="flex flex-col relative top-0 w-full">
       <Header heading="Home" padding={"pb-14"}/>
       <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal ">
       <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>clickHandler()}>
@@ -44,7 +40,7 @@ export const CommunityChat = ({setShowNavBar}) =>
       </section>
     </header>
 
-    <div className='w-screen h-screen flex flex-col justify-end relative'>
+    <div className='w-screen flex flex-col flex-1 justify-end relative'>
       {openModal && <ImageModal media={media} setMedia={setMedia} setMediaUrl={setMediaUrl} setOpenModal={setOpenModal}/>}
       <div className='mb-[40px]'>
         <div className='flex items-end justify-end mb-[20px]'>

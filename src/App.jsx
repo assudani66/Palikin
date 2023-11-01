@@ -16,7 +16,7 @@ export default function App()
       <Route path="/" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/friends" element={<FriendsList />} />
-      <Route path="/friends/chat" element={<FriendChat setShowNavBar={setShowNavBar}/>} />
+      <Route path="/friends/chat/:name" element={<FriendChat setShowNavBar={setShowNavBar}/>} />
       <Route path="/events" element={<Events />} />
       <Route path="/events/details" element={<EventDetails />} />
       <Route path="/communities" element={<Communities />} />
