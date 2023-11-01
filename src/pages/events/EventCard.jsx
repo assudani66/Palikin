@@ -1,8 +1,13 @@
 import React from 'react'
 
+import { useNavigate } from 'react-router-dom'
+
 export const EventCard = ({event}) => {
+
+  const navigate = useNavigate();
+
   return (
-    <li className='flex gap-4 h-fit ml-8 mb-5'>
+    <li className='flex gap-4 h-fit ml-8 mb-5' onClick={()=>navigate("/events/details")}>
         <span className='flex justify-center items-center text-3xl rounded-[22px] bg-primary w-16 h-16'
         style={{
             backgroundImage: 'radial-gradient(50% 50% at 50% 50%, #FFC8B2 0%, #F68559 100%)'
