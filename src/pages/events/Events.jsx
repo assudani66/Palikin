@@ -6,9 +6,9 @@ import { ActionButton } from '../../components'
 
 export const Events = () => 
 {
-  const eventList= [{_id:"1",name:"Kubuntu's Party", date:"01-11-2023", time:"4:00 PM", communityName:"Harmony Haven"},
-  {_id:"2",name:"Kubuntu's Party", date:"01-11-2023", time:"4:00 PM", communityName:"Harmony Haven"},
-  {_id:"3",name:"Kubuntu's Party", date:"01-11-2023", time:"4:00 PM", communityName:"Harmony Haven"}]
+  const eventList= [{_id:"1",name:"Ted Talk", date:"05-12-2023", time:"6:00 PM", communityName:"Peace Out"},
+  {_id:"2",name:"Vue Conference", date:"01-01-2024", time:"4:00 PM", communityName:"Harmony Haven"},
+  {_id:"3",name:"Hunger Games", date:"01-12-2023", time:"5:00 PM", communityName:"Common Wealth"}]
 
   return (
     <div >
