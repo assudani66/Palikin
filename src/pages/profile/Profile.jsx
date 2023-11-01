@@ -7,7 +7,7 @@ import {EditProfileForm} from "../../forms";
 
 export const Profile = () => {
 
-  const profileInfo = {
+  const profile = {
     firstName: "Levi",
     lastName: "Ackerman",
     username: "levi",
@@ -17,6 +17,8 @@ export const Profile = () => {
     twitterUrl: "https://example.com/levi",
     instaUrl: "https://example.com/igLevi"
   }
+
+  const [profileInfo,setProfileInfo] = useState(profile);
   
   const [showModal, setShowModal] = useState(false);
 
@@ -27,11 +29,11 @@ export const Profile = () => {
 
   return (
     <>
-    {showModal &&  <EditProfileForm setShowModal={setShowModal}/>}
+    {showModal &&  <EditProfileForm setShowModal={setShowModal} profileInfo={profileInfo} setProfileInfo={setProfileInfo}/>}
     <Header heading={"Profile"} padding={"pb-32"}/>
     <div className=" -mt-24 justify-center">
       <div className="flex flex-col justify-center items-center bg-white mx-9 rounded-lg shadow-md h-72" style={{boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)'}}>
-        <img src={profileInfo.profilePic} alt="profile" width={96} height={96} className="w-24 h-24 rounded-full -mt-12 border-[6px] border-background box-content"/>
+        <img src={profileInfo.profilePic} alt="profile" width={96} height={96} className="w-24 h-24 rounded-full -mt-12 border-[6px] border-background box-content bg-white"/>
         <img src={profileInfo.qrCode} alt="qr" width={230} height={230}/>
         <h1 className="font-bold">@{profileInfo.username}</h1>
       </div>
