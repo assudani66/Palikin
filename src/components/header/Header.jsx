@@ -6,13 +6,15 @@ export const Header = ({heading,padding}) =>
 {
   const [showNotifications, setShowNotifications] = useState(false);
 
-  if(showNotifications)
-  {
-    return (<NotificationModal heading={heading} padding={padding} setShowNotifications={setShowNotifications}/>)
-  }
-  else
+  // if(showNotifications)
+  // {
+  //   return (<NotificationModal  padding={padding} setShowNotifications={setShowNotifications}/>)
+  // }
+  // else
 
   return (
+    <>
+    {showNotifications && <NotificationModal  padding={padding} setShowNotifications={setShowNotifications}/>}
     <div className={`flex justify-between items-center pt-12 ${padding?? "pb-12"} px-8 bg-background rounded-b-[30px] `}>
       <h1 className='text-2xl font-bold '>{heading}</h1>
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>setShowNotifications(true)}>
@@ -28,5 +30,6 @@ export const Header = ({heading,padding}) =>
 </svg>
 
     </div>
+    </>
   )
 }
