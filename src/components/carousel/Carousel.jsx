@@ -1,6 +1,29 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollControlButton from "./ScrollControlButton";
 import EventCarouselCard from "./EventCarouselCard";
+const events = [
+  {
+    eventName: "Kubuntu Party",
+    groups: "4 groups",
+    date: "21-11-2023",
+    time: "4:00PM",
+    eventPage: "events/page",
+  },
+  {
+    eventName: "Tech Conference",
+    groups: "8 groups",
+    date: "15-12-2023",
+    time: "9:30AM",
+    eventPage: "events/page",
+  },
+  {
+    eventName: "Art Exhibition",
+    groups: "2 groups",
+    date: "05-01-2024",
+    time: "2:00PM",
+    eventPage: "events/page",
+  },
+];
 
 export const Carousel = () => {
   const carouselRef = useRef(null);
@@ -39,9 +62,9 @@ export const Carousel = () => {
         className="flex space-x-4 w-[450px] overflow-scroll snap-x scroll-smooth scroll-proximity snap-mandatory cursor-grab"
         ref={carouselRef}
       >
-        <EventCarouselCard />
-        <EventCarouselCard />
-        <EventCarouselCard />
+        {events.map((event, index) => (
+          <EventCarouselCard key={index} {...event} />
+        ))}
       </div>
       <div className="flex  items-center space-x-2">
         <ScrollControlButton

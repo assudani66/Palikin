@@ -3,7 +3,7 @@ import React from "react";
 const ScrollControlButton = ({ snapPoint, isActive, handleClick }) => {
   // Define CSS classes based on isActive
   const buttonClasses = `w-2 h-2 flex items-center justify-center rounded-full  ${
-    isActive ? "bg-blue-500 text-white" : "bg-gray-300 text-gray-700"
+    isActive ? "bg-orange-500 text-white" : "bg-stone-600 text-gray-700"
   }`;
 
   const icon = (
