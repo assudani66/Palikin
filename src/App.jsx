@@ -11,9 +11,9 @@ export default function App()
   const [showNavBar,setShowNavBar] = useState(true);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen box-border overflow-x-hidden overflow-y-hidden">
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Communities />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/friends" element={<FriendsList />} />
       <Route path="/friends/chat/:name" element={<FriendChat setShowNavBar={setShowNavBar}/>} />
