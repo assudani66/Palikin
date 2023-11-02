@@ -23,14 +23,14 @@ const Onboarding = () => {
   };
   return (
     <div
-      className={`flex flex-col width-full h-screen items-center justify-center pt-20 bg-cover ${onboardingImages[currentImage].bg}`}
+      className={`flex flex-col width-full h-screen items-center justify-center pt-48 bg-cover ${onboardingImages[currentImage].bg}`}
     >
       <img
         className="max-w-[430px]"
         src={[onboardingImages[currentImage].illustration]}
       ></img>
       <button
-        className="w-80 h-14 px-36 py-5 bg-teal-600 rounded justify-center items-center gap-2.5 inline-flex absolute bottom-20 shadow-md"
+        className="w-80 h-14 px-36 py-5 bg-teal-600 rounded justify-center items-center gap-2.5 inline-flex absolute bottom-20 shadow-md -mb-2"
         onClick={() => onClickHandler()}
       >
         <div className="text-orange-50 text-xl font-bold font-Lato">Next</div>
