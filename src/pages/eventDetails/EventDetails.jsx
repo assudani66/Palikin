@@ -15,7 +15,7 @@ export const EventDetails = () =>
     const [like,setLike] = useState(false);
 
   return (
-    <div className="flex flex-col overflow-x-hidden ">
+    <div className="flex flex-col overflow-x-hidden md:mx-[20%]">
       <header className="flex flex-col relative h ">
         <Header heading="Events" />
         <section className=" absolute bottom-3 ml-2 flex justify-around items-center w-full font-normal" >

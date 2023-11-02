@@ -17,7 +17,7 @@ export const Events = () =>
 
   return (
     <>
-    <div className='flex flex-col justify-between h-full  '>
+    <div className='flex flex-col justify-between h-full  md:mx-[20%]'>
     <Header heading={"Events"} padding={"pb-20"}/>
       <Carousel />
       <h1 className='text-xl font-bold ml-7 mt-7 mb-3'>More Events</h1>

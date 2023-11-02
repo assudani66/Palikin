@@ -32,7 +32,7 @@ export const Profile = () => {
     <>
     {showModal &&  <EditProfileForm setShowModal={setShowModal} profileInfo={profileInfo} setProfileInfo={setProfileInfo}/>}
     
-    <div className="  flex flex-col justify-between h-screen">
+    <div className="  flex flex-col justify-between h-screen md:mx-[20%]">
     <Header heading={"Profile"} padding={"pb-32"}/>
       <div className="-mt-32 flex flex-col justify-center items-center bg-white mx-9 rounded-lg shadow-md h-72" style={{boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.1)'}}>
         <img src={profileInfo.profilePic} alt="profile" width={96} height={96} className="w-24 h-24 rounded-full -mt-12 border-[6px] border-background box-content bg-white"/>
