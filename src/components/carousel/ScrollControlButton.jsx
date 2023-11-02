@@ -1,9 +1,9 @@
 import React from "react";
 
-const ScrollControlButton = ({ snapPoint, isActive, handleClick }) => {
+const ScrollControlButton = ({ snapPoint, isActive, handleClick, activeColor }) => {
   // Define CSS classes based on isActive
-  const buttonClasses = `w-2 h-2 flex items-center justify-center rounded-full  ${
-    isActive ? "bg-orange-500 text-white" : "bg-stone-600 text-gray-700"
+  const buttonClasses = `w-2 h-2 md:w-3 md:h-3 flex items-center justify-center rounded-full  ${
+    isActive ? activeColor : "bg-stone-400 text-gray-700"
   }`;
 
   const icon = (
