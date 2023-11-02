@@ -12,8 +12,8 @@ export const Communities = () => {
 
   const communities = [{_id:"1",name:"Harmony Haven",
   description:"Harmony Haven is a tight-kin environmentally conscious community"},
-  {_id:"2",name:"Willowbrook Heights",
-  description:"Willowbrook Heights is an exclusive gated community nestled in the rolling hills"},
+  {_id:"2",name:"Will Heights",
+  description:"Will Heights is an exclusive gated community nestled in the rolling hills"},
   {_id:"3",name:"Pinecrest Village",
   description:"Pinecrest Village is a cozy residential neighborhood with charming cottages"}
 ]
