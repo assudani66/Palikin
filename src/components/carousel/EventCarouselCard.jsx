@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-const EventCarouselCard = ({ eventName, groups, date, time }) => {
+const EventCarouselCard = ({ eventName, groups, date, time,style }) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="w-96 h-56 bg-gradient-to-br from-orange-300 to-red-400 rounded-[40px] shadow-[0px 18px 32px 0px rgba(201, 127, 96, 0.42)] border-2 border-red-400 relative snap-start">
-        <div className="absolute bottom-2 left-5  w-40  p-4 text-white">
+      <div className={` w-[375px] h-56 ${style} rounded-[40px] shadow-lg border-2 relative snap-start`}>
+        <div className="absolute bottom-2 left-5  w-40  p-4 text-white ">
           <div className="w-11 h-11 bg-white bg-opacity-10 rounded-2xl border border-white border-opacity-10 flex items-center justify-center text-2xl ">
             🎉
           </div>
