@@ -4,7 +4,7 @@ const EventCarouselCard = ({ eventName, groups, date, time,style }) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className={` w-[375px] h-56 ${style} rounded-[40px] shadow-lg border-2 relative snap-start`}>
+      <div className={` w-[375px]  h-56 ${style} rounded-[40px] shadow-lg border-2 relative snap-start`}>
         <div className="absolute bottom-2 left-5  w-40  p-4 text-white ">
           <div className="w-11 h-11 bg-white bg-opacity-10 rounded-2xl border border-white border-opacity-10 flex items-center justify-center text-2xl ">
             🎉

@@ -29,7 +29,7 @@ export const Communities = () => {
   return (
     <>
     {showForm && <CommunityForm setShowForm={setShowForm}/>}
-    <div className=' flex flex-col justify-between h-full'>
+    <div className=' flex flex-col justify-between h-full md:mx-[20%]'>
     <Header heading="Home" padding={"pb-20"}/>
       <Carousel />
     <h1 className='text text-2xl font-bold mt-8 ml-8'>Your Communities</h1>
