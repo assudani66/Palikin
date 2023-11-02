@@ -5,6 +5,7 @@ import { EventCard } from './EventCard'
 import { ActionButton } from '../../components'
 
 import { Carousel } from '../../components'
+import { NavBar } from '../../components'
 
 export const Events = () => 
 {
@@ -15,18 +16,15 @@ export const Events = () =>
 
 
   return (
-    <><Header heading={"Events"} padding={"pb-40"}/>
-    <div className='  '>
-      {/* Put the carousel here in header */}
-      <header className='mt -mt-36'>
+    <>
+    <div className='flex flex-col justify-between h-full  '>
+    <Header heading={"Events"} padding={"pb-20"}/>
       <Carousel />
-      </header>
-      
-
-      <h1 className='text-xl font-bold ml-7 mb-8 mt-12'>More Events</h1>
+      <h1 className='text-xl font-bold ml-7 mt-7 mb-3'>More Events</h1>
       {eventList.map(event=>(
         <EventCard event={event} key={event._id} />
       ))}
+      <NavBar />
     <ActionButton type="calendar" />
     </div>
     </>
