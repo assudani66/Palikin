@@ -23,7 +23,7 @@ const Onboarding = () => {
   };
   return (
     <div
-      className={`flex flex-col width-full h-screen items-center justify-center ${onboardingImages[currentImage].bg}`}
+      className={`flex flex-col width-full h-screen items-center justify-center pt-20 bg-cover ${onboardingImages[currentImage].bg}`}
     >
       <img
         className="max-w-[430px]"
