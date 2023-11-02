@@ -4,6 +4,7 @@ import { Header } from '../../components/header/Header'
 import { ActionButton } from '../../components/actionButton/ActionButton'
 
 import { Carousel } from '../../components/carousel/Carousel'
+import { NavBar } from '../../components'
 
 import {CommunityCard} from "./CommunityCard";
 
@@ -19,13 +20,15 @@ export const Communities = () => {
 
   return (
     <>
+    
+    <div className=' flex flex-col justify-between h-full'>
     <Header heading="Home" padding={"pb-20"}/>
-    <div className='mt -mt-14 md:flex md:flex-col md:justify-center'>
       <Carousel />
     <h1 className='text text-2xl font-bold mt-8 ml-8'>Your Communities</h1>
     {communities?.map(community=>(
       <CommunityCard community={community}/>
     ))}
+    <NavBar />
     </div>
     <ActionButton type="group"/>
     </>

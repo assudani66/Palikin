@@ -23,7 +23,7 @@ export default function App()
       <Route path="/community/chat/:name" element={<CommunityChat setShowNavBar={setShowNavBar}/>} />
     </Routes>
 
-    {showNavBar && <NavBar />}
+    {/* {showNavBar && <NavBar />} */}
 
     </div>
   )
