@@ -4,6 +4,8 @@ import { Header } from '../../components/header/Header'
 import { FriendCard } from './FriendCard';
 import {ActionButton} from "../../components/actionButton/ActionButton"
 
+import { NavBar } from '../../components';
+
 export const FriendsList = () => {
 
   const friendsData = [
@@ -48,7 +50,7 @@ export const FriendsList = () => {
   },[searchTerm])
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-between h-screen">
       <header className='flex flex-col relative mb-[40px] justify-center'>
         <Header heading={"Friends"} padding={"pb-20"}/>
         <section className='flex justify-center items-center absolute top-[60%] self-center '>
@@ -65,6 +67,7 @@ export const FriendsList = () => {
         }
         </section>
       </main>
+      <NavBar />
       <ActionButton type={"create"}/>
       </div>
   )
