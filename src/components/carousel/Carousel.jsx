@@ -56,16 +56,16 @@ export const Carousel = () => {
   };
 
   return (
-    <div className="flex flex-col items-center -mt-12 pl-14">
+    <div className="flex flex-col items-center -mt-12 pl-[74px]">
       <div
-        className="flex space-x-4 w-[450px] pb-8 px-16 overflow-scroll snap-x scroll-smooth scroll-proximity snap-mandatory cursor-grab"
+        className="flex space-x-4 w-[450px] pb-8 px-20 overflow-scroll snap-x scroll-smooth scroll-proximity snap-mandatory cursor-grab"
         ref={carouselRef}
       >
         {events.map((event, index) => (
           <EventCarouselCard key={index} {...event} />
         ))}
       </div>
-      <div className="flex  items-center space-x-2 pt-2">
+      <div className="flex  items-center space-x-2 pt-2 -ml-[20%]">
         <ScrollControlButton
           snapPoint={0}
           isActive={activeSnapPoint === 0}
