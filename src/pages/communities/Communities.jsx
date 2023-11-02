@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from "react"
 
 import { Header } from '../../components/header/Header'
 import { ActionButton } from '../../components/actionButton/ActionButton'
@@ -7,8 +8,15 @@ import { Carousel } from '../../components/carousel/Carousel'
 import { NavBar } from '../../components'
 
 import {CommunityCard} from "./CommunityCard";
+import { CommunityForm } from '../../forms'
 
 export const Communities = () => {
+
+  const [showForm, setShowForm] = useState(false);
+
+  const actionClickHandler = () => {
+    setShowForm(true)
+  }
 
   const communities = [{_id:"1",name:"Harmony Haven",
   description:"Harmony Haven is a tight-kin environmentally conscious community"},
@@ -20,7 +28,7 @@ export const Communities = () => {
 
   return (
     <>
-    
+    {showForm && <CommunityForm setShowForm={setShowForm}/>}
     <div className=' flex flex-col justify-between h-full'>
     <Header heading="Home" padding={"pb-20"}/>
       <Carousel />
@@ -30,7 +38,7 @@ export const Communities = () => {
     ))}
     <NavBar />
     </div>
-    <ActionButton type="group"/>
+    <ActionButton type="group" actionClickHandler={actionClickHandler} />
     </>
   )
 }
