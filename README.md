@@ -1,5 +1,10 @@
 # Palikin
 Palikin is a responsive web application designed with a mobile-first approach, ensuring seamless user experience across all platforms. It provides a dynamic space for users to connect, engage, and share in various communities of interest.
+It has on 3 core Features: 
+1. Helping community members Explore and join communities.
+2. Help communities with hosting cool offline/online events.
+3. Help community members connect and find new friends.
+
 
 ## Features
 
